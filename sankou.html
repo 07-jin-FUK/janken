@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+    <link rel="stylesheet" href="css/sankou.css">
+</head>
+
+<body>
+    <div id="main">
+        <div class="mypokemon">
+            <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+            <h2 id="tamesi">Choose your Starter</h2>
+            <h2 id="tamesi">click Monster Ball!!</h2>
+            <input type="radio" name="pokemonSelect" id="bulbasaur" />
+            <input type="radio" name="pokemonSelect" id="charmander" />
+            <input type="radio" name="pokemonSelect" id="squirtle" />
+
+            <div class="pokeball-container">
+                <label id="hito" for="bulbasaur" class="pokeball bulbasaur"></label>
+                <label id="husi" for="charmander" class="pokeball charmander"></label>
+                <label id="zeni" for="squirtle" class="pokeball squirtle"></label>
+
+            </div>
+
+            <div class="poke-container">
+                <div class="poke"></div>
+            </div>
+
+            <div id="btnall" class="btn">
+                <button id="rock" value="0">フシギダネ!<br>キミに決めた!</button>
+                <button id="scissors" value="1">ヒトカゲ!<br>キミに決めた!</button>
+                <button id="paper" value="2">ゼニガメ!<br>キミに決めた!</button>
+            </div>
+        </div>
+
+        <div id="container">
+            <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+            <h1 class="VS">VS</h1>
+            <p class="text">Turn：
+                <span id="gameCount">0</span>
+            </p>
+
+            <div id="battle">
+                <p id="myHand">自分の出したポケモン：まだ出していません</p>
+                <p id="enemyHand">相手の出したポケモン：まだ出していません</p>
+                <h2 id="result"></h2>
+            </div>
+
+            <div id="resultTable">
+                <dl>
+                    <dt class="text">勝ち数</dt>
+                    <dt class="text">負け数</dt>
+                    <dt class="text">勝率</dt>
+                </dl>
+                <dl>
+                    <dd id="winCount">ー</dd>
+                    <dd id="loseCount">ー</dd>
+                    <dd id="winRate">ー</dd>
+                </dl>
+            </div>
+
+            <div id="reset"></div>
+
+        </div>
+        <div>
+            <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
+            <h2 class="ene">Enemy Monster</h2>
+
+
+            <div class="poke-container1" id="poke-container1">
+                <p class="hako">
+                    <img class="nakami" src="./images/img1.png" alt="" id="area1" />
+                </p>
+            </div>
+
+
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+        <script src="./main.js"></script>
+</body>
+
+</html>

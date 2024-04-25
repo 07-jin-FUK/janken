@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>じゃんけん</title>
+  <link href="https://fonts.googleapis.com/css?family=Noto+Sans+JP" rel="stylesheet" />
+  <link rel="stylesheet" href="css/janken.css">
+</head>
+
+<body>
+  <main>
+
+    <section>
+      <h1>じゃんけん</h1>
+    </section>
+
+    <section id="aite">
+      <p>コンピュータの手は？？</p>
+    </section>
+
+    <section id="result">
+      <p>勝敗は？？</p>
+    </section>
+
+    <section>
+      <button id="button1">グー</button>
+      <button id="button2">チョキ</button>
+      <button id="button3">パー</button>
+    </section>
+
+  </main>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script>
+
+    $("#button1").on("click", function () {
+      const min = 0
+      const max = 3
+      const teikei = Math.floor(Math.random() * (max - min));
+      console.log(teikei);
+      if (teikei === 0) { $("#aite").text("グー"); $("#result").text("あいこ"); }
+      else if (teikei === 1) { $("#aite").text("チョキ"); $("#result").text("勝ち"); }
+      else { $("#aite").text("パー"); $("#result").text("負け") };
+    });
+
+    $("#button2").on("click", function () {
+      const min = 0
+      const max = 3
+      const teikei = Math.floor(Math.random() * (max - min));
+      console.log(teikei);
+      if (teikei === 0) { $("#aite").text("グー"); $("#result").text("負け") }
+      else if (teikei === 1) { $("#aite").text("チョキ"); $("#result").text("あいこ") }
+      else { $("#aite").text("パー"); $("#result").text("勝ち") }
+    });
+
+    $("#button3").on("click", function () {
+      const min = 0
+      const max = 3
+      const teikei = Math.floor(Math.random() * (max - min));
+      console.log(teikei);
+      if (teikei === 0) { $("#aite").text("グー"); $("#result").text("勝ち") }
+      else if (teikei === 1) { $("#aite").text("チョキ"); $("#result").text("負け") }
+      else { $("#aite").text("パー"); $("#result").text("あいこ") }
+    });
+
+  </script>
+
+</body>
+
+</html>

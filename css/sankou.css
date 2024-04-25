@@ -6,8 +6,8 @@
 
 #container {
     text-align: center;
-    width: 600px;
-    height: 600px;
+    width: 650px;
+    height: 1000px;
 }
 
 .btn {
@@ -74,6 +74,11 @@ input[type="button"]:active {
     padding: 10px;
 }
 
+#result {
+    font-size: 50px;
+}
+
+
 #myHand,
 #enemyHand {
     font-size: 30px;
@@ -89,7 +94,7 @@ dl {
     flex-wrap: wrap;
     justify-content: space-evenly;
     border-bottom: 1px solid #ccc;
-    font-size: 20px;
+    font-size: 15px;
 }
 
 dl:last-child {
@@ -119,8 +124,9 @@ dd {
 }
 
 .text {
-    font-size: 40px;
+    font-size: 30px;
     height: 70px;
+    align-content: center;
     font-family: "Press Start 2P";
 }
 
@@ -521,6 +527,15 @@ input[type="radio"]#squirtle:checked~.poke-container .poke {
     }
 }
 
+#resultTable {
+    background-color: darkgray;
+}
+
+#battle {
+    background-color: darkgray;
+}
+
+
 @keyframes pokeballShake {
     0% {
         left: -30px;
@@ -558,4 +573,11 @@ input[type="radio"]#squirtle:checked~.poke-container .poke {
 * {
     margin: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.1)), url(../images/maxresdefault.jpg);
+    background-size: cover;
+    height: 1000px;
+
 }

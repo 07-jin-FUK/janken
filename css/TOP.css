@@ -1,0 +1,153 @@
+.all {
+    width: 1400px;
+    height: 1000px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-image: url(../images/ゲームボーイカラー.jpg);
+
+    z-index: 2;
+}
+
+body {
+    background-image: url(../images/kotatu.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+
+    z-index: 1;
+}
+
+#switch {
+    position: fixed;
+    margin-left: 30%;
+    width: 260px;
+    height: 90px;
+    /* border: 2px double black; */
+    cursor: pointer;
+    z-index: 6;
+}
+
+#power {
+    font-size: 40px;
+    font-family: "Press Start 2P";
+    border: 10px double black;
+    background-color: rgb(229, 241, 193);
+}
+
+#power:hover {
+    transform: scale(1.2);
+}
+
+#Game {
+    display: none;
+    margin-left: 770px;
+    font-size: 40px;
+    font-family: "Press Start 2P";
+    border: 10px double black;
+    background-color: rgb(229, 241, 193);
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 15;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+#Game:hover {
+    transform: scale(1.2);
+}
+
+.midori {
+    width: 1400px;
+    height: 500px;
+
+}
+
+
+#kaset {
+    display: none;
+    width: 21%;
+    height: 54%;
+    margin-top: 10%;
+    margin-left: 61.2%;
+    z-index: 4;
+
+}
+
+video#OP {
+    width: 20%;
+    height: 50%;
+    margin-top: 10%;
+    margin-left: 61.8%;
+    overflow: visible;
+    object-fit: cover;
+    z-index: 3;
+}
+
+#kettei {
+    display: none;
+}
+
+
+
+
+#light {
+    display: none;
+    top: -330px;
+    left: 54%;
+    object-position: center;
+    background-size: 100% 100%;
+}
+
+/* #light.on_light {
+
+    background-size: 100% 100%;
+} */
+
+.mi1 {
+    width: 20px;
+    height: 20px;
+    margin-top: 40px;
+    margin-left: 45px;
+    background-color: #f00;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* 
+.mi1::before {
+    display: block;
+    content: "";
+    width: 25px;
+    height: 25px;
+    top: 25px;
+    left: 25px;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 50%;
+    z-index: 2;
+    filter: blur(5px);
+}
+
+.mi1::after { */
+/* display: block;
+    content: "";
+    width: 100px;
+    height: 100px;
+    top: 0px;
+    left: 0px;
+    position: absolute;
+    filter: blur(5px);
+    background-color: transparent;
+    z-index: 1;
+    /* box-shadow: inset -10px -10px 0 3px #400; */
+/* border-radius: 50%;
+} */

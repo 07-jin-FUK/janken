@@ -581,3 +581,38 @@ body {
     height: 1000px;
 
 }
+
+#musicbutton {
+    width: 200px;
+    height: 100px;
+    margin-left: 200px;
+    font-size: 20px;
+    background-color: #e0ba36;
+    color: #000;
+    border: 10px double black;
+    font-family: "Press Start 2P";
+}
+
+#musicbutton:hover {
+    scale: 1.2;
+}
+
+
+#resu {
+    font-size: 50px;
+    color: red;
+}
+
+#winCount {
+    font-size: 30px;
+}
+
+#loseCount {
+    font-size: 30px;
+    margin-left: 70px;
+    margin-right: 60px;
+}
+
+#winRate {
+    font-size: 30px;
+}

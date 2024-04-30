@@ -10,12 +10,27 @@
 </head>
 
 <body>
-    <audio src="./iwashiro_pokemoso_battle_1 (1)/iwashiro_pokemoso_battle_1.mp3" id="music" controls loop></audio>
+    <audio type="audiom" src="./iwashiro_pokemoso_battle_1 (1)/iwashiro_pokemoso_battle_1.mp3" id="music" loop></audio>
     <div id="main">
         <div class="mypokemon">
             <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
             <h2 id="tamesi">Choose your Starter</h2>
             <h2 id="tamesi">click Monster Ball!!</h2>
+            <button id="musicbutton">Battle<br>Standby!</button>
+            <!-- <div id="gauge-container">
+                <div id="background">
+                    <div id="background-top"></div>
+                    <div id="background-bottom"></div>
+                    <div id="back-gauge" class="full"></div>
+                    <div id="front-gauge" class="full"></div>
+                    <div id="frame">
+                        <div id="triangle-tl"></div>
+                        <div id="triangle-tr"></div>
+                        <div id="triangle-bl"></div>
+                        <div id="triangle-br"></div>
+                    </div>
+                </div>
+            </div> -->
             <input type="radio" name="pokemonSelect" id="bulbasaur" />
             <input type="radio" name="pokemonSelect" id="charmander" />
             <input type="radio" name="pokemonSelect" id="squirtle" />
@@ -41,13 +56,14 @@
         <div id="container">
             <link href='https://fonts.googleapis.com/css?family=Press+Start+2P' rel='stylesheet' type='text/css'>
             <h1 class="VS">VS</h1>
-            <p class="text">Turn：
+            <p id="KO" class="text">Turn：
                 <span id="gameCount">0</span>
             </p>
 
             <div id="battle">
                 <p id="myHand">自分の出したポケモン：まだ出していません</p>
                 <p id="enemyHand">相手の出したポケモン：まだ出していません</p>
+                <h2 id="resu"></h2>
                 <h2 id="result"></h2>
             </div>
 
@@ -55,13 +71,15 @@
                 <dl>
                     <dt class="text">Attack!</dt>
                     <dt class="text">Damage!</dt>
-                    <dt class="text">勝率</dt>
+                    <dt class="text">撃破率</dt>
                 </dl>
                 <dl>
                     <dd id="winCount">ー</dd>
                     <dd id="loseCount">ー</dd>
                     <dd id="winRate">ー</dd>
                 </dl>
+
+
             </div>
 
             <div id="reset"></div>

@@ -32,11 +32,17 @@
 
     const alert = (winResult, loseResult) => {
         if (winResult > loseResult) {
-            window.alert('TimeUP!あなたの勝ち！');
+            $("#resu").text("あなたの勝ち！")
+
+            // window.alert('TimeUP!あなたの勝ち！');
         } else if (winResult < loseResult) {
-            window.alert('TimeUP！あなたの負け！');
+            $("#resu").text("残念。あなたの負け！");
+
+            // window.alert('TimeUP！あなたの負け！');
         } else {
-            window.alert('TimeUP！引き分け！');
+            $("#resu").text("TimeUP!引き分け！")
+
+            // window.alert('TimeUP！引き分け！');
         }
     }
 
@@ -49,7 +55,7 @@
         //ボタン要素作成
         const resetBtn = document.createElement('input');
         resetBtn.type = 'button';
-        resetBtn.value = '更新';
+        resetBtn.value = 'もう一回';
         reset.appendChild(resetBtn); //親要素(reset)の子要素にボタンを配置する
 
         resetBtn.addEventListener('click', () => { //更新ボタンを押下後、画面リロードする
@@ -90,6 +96,7 @@
             winResult++;
             gameCountReplace(gameCount);
 
+
         } else if (handResult === 1) {
             result.textContent = resultText[0];
             gameCount++;
@@ -123,3 +130,61 @@
     paper.addEventListener('click', onClick);
 
 })();
+
+window.addEventListener('DOMContentLoaded', function () {
+
+    const btn_p = document.getElementById("musicbutton");
+    const vide = document.querySelector("#music");
+
+    btn_p.addEventListener("click", e => {
+        vide.play();
+    });
+
+});
+
+
+// ★初期化
+function load() {
+    maxhp = 100; // 変更可
+    nowhp = maxhp;
+
+    N = document.getElementById("now");
+    T = document.getElementById("txt");
+    B1 = document.getElementById("btn1");
+    B2 = document.getElementById("btn2");
+
+    N.innerHTML = nowhp + "/" + maxhp;
+}
+
+// ★ゲージ減少
+function attack() {
+    random = Math.floor(Math.random() * 11);
+    nowhp = nowhp - random;
+    if (nowhp >= 0) {
+        if (random == 0) {
+            str = "勇者に攻撃をかわされた";
+        } else {
+            str = "勇者に[ " + random + " ]のダメージを与えた";
+        }
+    } else {
+        nowhp = 0;
+        str = "勇者は力尽きた";
+        B1.style.display = "none";
+        B2.style.display = "block";
+    }
+    T.value = str;
+    N.innerHTML = nowhp + "/" + maxhp;
+    N.style.width = 200 / maxhp * nowhp + "px";
+}
+
+// ★リロード
+function reload() {
+    nowhp = maxhp;
+    B1.style.display = "block";
+    B2.style.display = "none";
+    T.value = "新たな勇者を見つけた";
+    N.innerHTML = nowhp + "/" + maxhp;
+    N.style.width = 200 / maxhp * nowhp + "px";
+}
+
+

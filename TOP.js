@@ -62,4 +62,11 @@ window.addEventListener('DOMContentLoaded', function () {
         window.location.replace('./rpg/index.html');
     }, 2000);
 
+    // tn.addEventListener("click", e => {
+    //     this.setTimeout(function () {
+    //         window.location.href = "./rpg/index.html";
+
+    //     }, 2000);
+
+    // });
 });

@@ -185,7 +185,7 @@ addEventListener('load', () => {
                             game.sounds['./rpg/sound/ライバル発見.mp3'].start();
                             //６秒たったら、タイトルシーンに切り替える
                             setTimeout(() => {
-                                window.location.replace('http://127.0.0.1:5500/sankou.html');
+                                window.location.replace('../sankou.html');
                             }, 6000);
                         }
                     }

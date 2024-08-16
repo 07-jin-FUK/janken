@@ -188,3 +188,20 @@ function reload() {
 }
 
 
+/* audio・video 音量初期値の設定 */
+const mediasVol_def = function () {
+    //範囲： 0〜1 の間　※初期値=1(100%の最大)
+
+
+    // 特定のidのaudioの音量設定
+    const a1 = document.getElementById('music'); //('a1')の a1は例
+    a1.volume = 0.3; // 0〜1 の間で
+    //2コ以上あるときは下記のように記述していく
+    //const a2=document.getElementById('a2');
+    //a2.volume=0.7; //例  
+
+}
+//ページ読み込み時に処理
+window.addEventListener('DOMContentLoaded', function () {
+    mediasVol_def();
+}, false); 

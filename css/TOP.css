@@ -1,12 +1,15 @@
-.all {
-    width: 100%;
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-image: url(../images/ゲームボーイカラー.jpg);
 
-    z-index: 2;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
 }
 
 body {
@@ -14,41 +17,98 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-
-    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-#switch {
-    
-    margin-left: 36%;
-    width: 30%;
-    height: 90px;
-    /* border: 2px double black; */
-    cursor: pointer;
-    z-index: 6;
+.all {
+    width: 1000px;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/ゲームボーイカラー.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    position: relative;
+    z-index: 2;
 }
 
-#power {
-    font-size: 40px;
-    font-family: "Press Start 2P";
-    border: 10px double black;
-    background-color: rgb(229, 241, 193);
+
+.midori {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 80vw;
+    max-width: 1400px;
+    height: 100vh;
 }
 
-#power:hover {
-    transform: scale(1.2);
+#kaset {
+    display: none;
+    width: 170px;
+    height: auto;
+    top: 5vh;
+    position: absolute;
+object-fit: cover;
+    z-index: 4;
+}
+
+video#OP {
+    width: 170px;
+    height: auto;
+    top: 5vh;
+    position: absolute;
+    object-fit: cover;
+    z-index: 3;
 }
 
 #Game {
     display: none;
-    margin-left: 770px;
-    font-size: 40px;
+    font-size: 2vw;
     font-family: "Press Start 2P";
-    border: 10px double black;
+    border: 5px double black;
     background-color: rgb(229, 241, 193);
     animation: fadeIn 1.5s ease-in-out;
+    margin-top: 2vh;
     z-index: 15;
 }
+
+#Game:hover {
+    transform: scale(1.1);
+}
+
+
+#switch {
+    position: absolute;
+    width: 30%;
+    max-width: 200px;
+    height: 7vh;
+    cursor: pointer;
+    z-index: 6;
+    margin-top: 25vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#power {
+    font-size: 2vw;
+    font-family: "Press Start 2P";
+    border: 5px double black;
+    background-color: rgb(229, 241, 193);
+    padding: 10px;
+}
+
+#power:hover {
+    transform: scale(1.1);
+}
+
 
 @keyframes fadeIn {
     0% {
@@ -60,94 +120,34 @@ body {
     }
 }
 
-#Game:hover {
-    transform: scale(1.2);
-}
-
-.midori {
-    width: 1400px;
-    height: 500px;
-
-}
-
-
-#kaset {
-    display: none;
-    width: 21%;
-    height: 54%;
-    margin-top: 8.2%;
-    margin-left: 61.2%;
-    z-index: 4;
-
-}
-
-video#OP {
-    width: 20%;
-    height: 50%;
-    margin-top: 8.2%;
-    margin-left: 61.8%;
-    overflow: visible;
-    object-fit: cover;
-    z-index: 3;
-}
-
-#kettei {
-    display: none;
-}
-
-
-
-
-#light {
-    display: none;
-    top: -38%;
-    left: 37.5%;
-    object-position: center;
-    background-size: 100% 100%;
-}
-
-/* #light.on_light {
-
-    background-size: 100% 100%;
-} */
 
 .mi1 {
+    position: absolute;
+margin-bottom: 310px;
+margin-right: 230px;
     width: 20px;
     height: 20px;
-    margin-top: 40px;
-    margin-left: 45px;
     background-color: #f00;
     border-radius: 50%;
-    position: relative;
     overflow: hidden;
 }
 
-/* 
-.mi1::before {
-    display: block;
-    content: "";
-    width: 25px;
-    height: 25px;
-    top: 25px;
-    left: 25px;
-    position: absolute;
-    background-color: #fff;
-    border-radius: 50%;
-    z-index: 2;
-    filter: blur(5px);
-}
 
-.mi1::after { */
-/* display: block;
-    content: "";
-    width: 100px;
-    height: 100px;
-    top: 0px;
-    left: 0px;
-    position: absolute;
-    filter: blur(5px);
-    background-color: transparent;
-    z-index: 1;
-    /* box-shadow: inset -10px -10px 0 3px #400; */
-/* border-radius: 50%;
-} */
+@media (max-width: 768px) {
+    .midori {
+        width: 90vw;
+    }
+
+    #kaset,
+    video#OP {
+        width: 80vw;
+        height: auto;
+        top: 10vh;
+        left: 10vw;
+    }
+
+    #Game,
+    #power {
+        font-size: 3vw;
+    }
+}
